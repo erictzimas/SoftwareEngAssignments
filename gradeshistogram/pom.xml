@@ -33,7 +33,7 @@
 					<archive>
 						<manifest>
 						<!-- replace this with the class that contains the main method. It requires also the package name if exists. -->
-							<mainClass>gr.dmst.HistogramGenerator</mainClass> 
+							<mainClass>gr.dmst.Main</mainClass> 
 						</manifest>
 					</archive>
 					<descriptorRefs>

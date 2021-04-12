@@ -61,44 +61,6 @@ public class HistogramGenerator {
 		frame.pack();
 		// makes the previously created frame visible
 		frame.setVisible(true);
-	}
-	    // main method
-	public static void main(String[] args) throws IOException {
-        // TODO code application logic here
-       
-        // Getting filename from user
-        String path = args[0];
-        // create token1
-        String token1 = "";
-      
-        // List<String> temps = new LinkedList<String>();
-        List<String> temps = new ArrayList<String>();
-        try {
-        File file1 = new File(path);
-        // create Scanner inFile1
-		Scanner inFile1 = new Scanner(file1);
-       
-        // while loop to read file
-        while (inFile1.hasNext()) {
-          // find next line
-          token1 = inFile1.nextLine();
-          // adding file to list
-          temps.add(token1);
-          
-        } } catch (FileNotFoundException e) {
-        	e.printStackTrace();
-        }
-        // list to array
-        String[] tempsArray = temps.toArray(new String[0]);
-        int size = tempsArray.length;
-        // string to int
-        int [] arr = new int [size];
-        for(int i=0; i<size; i++) {
-           arr[i] = Integer.parseInt(tempsArray[i]);
-        }
-        // creating histogram
-         HistogramGenerator demo = new HistogramGenerator();
-		demo.generateChart(arr);
-      }
+	}	
 }
 

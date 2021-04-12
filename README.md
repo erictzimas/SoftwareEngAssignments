@@ -24,7 +24,7 @@ This module,requires one runtime dependency which is packaged in the main jar (f
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>gr.dmst.HistogramGenerator</mainClass> 
+							<mainClass>gr.dmst.Main</mainClass> 
 						</manifest>
 					</archive>
 					<descriptorRefs>
@@ -45,6 +45,6 @@ This module,requires one runtime dependency which is packaged in the main jar (f
 
 The produced jar is located in the target directory and can be executed as following:
 ```
-java -jar gradeshistogram/target/gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar
+java -jar gradeshistogram-0.0.1-SNAPSHOT-jar-with-dependencies.jar classes/grades.txt
 ```
 Note that the gradeshistogram-0.0.1-SNAPSHOT.jar is not executable. 

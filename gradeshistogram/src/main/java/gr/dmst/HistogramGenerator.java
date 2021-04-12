@@ -1,16 +1,9 @@
 package gr.dmst;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
 import org.jfree.chart.plot.PlotOrientation;
-import org.jfree.data.xy.XYSeries;
-import org.jfree.data.xy.XYSeriesCollection;
+import org.jfree.data.statistics.HistogramDataset;
 /***
  * 
  * @author erictzimas The purpose of this class is to create a JFreeChart XYLine chart 
@@ -28,30 +21,24 @@ public class HistogramGenerator {
 	 * @param dataValues Single dimension integer array
 	 */
 	public void generateChart(int[] dataValues) {
+		//Create new HistogramDataset object to store the array of grades
+		HistogramDataset dataset = new HistogramDataset();
+		// Initialize array
+		double [] grades = new double[dataValues.length];
 		/*
-		 * The XYSeriesCollection object is a set XYSeries series (dataset) that
-		 * can be visualized in the same chart
-		 */
-		XYSeriesCollection dataset = new XYSeriesCollection();
-		/*
-		 * The XYSeries that are loaded in the dataset. There might be many
-		 * series in one dataset.
-		 */
-		XYSeries data = new XYSeries("random values");
-		/*
-		 * Populating the XYSeries data object from the input Integer array
+		 * Populating the grades array from the input Integer array
 		 * values.
 		 */
-		for (int i = 0; i < dataValues.length; i++) {
-			data.add(i, dataValues[i]);
+		for (int i = 0; i < grades.length; i++) {
+			grades[i] = dataValues[i];
 		}
 		// add the series to the dataset
-		dataset.addSeries(data);
+		dataset.addSeries("Grades", grades, 10);
 		boolean legend = false; // do not visualize a legend
 		boolean tooltips = false; // do not visualize tooltips
 		boolean urls = false; // do not visualize urls
-		// Declare and initialize a createXYLineChart JFreeChart
-		JFreeChart chart = ChartFactory.createXYLineChart("Students grades histogram", "Students", "Grades", dataset,
+		// Declare and initialize a Histogram JFreeChart
+		JFreeChart chart = ChartFactory.createHistogram("Students grades Histogram", "Grade Score", "Number of Students", dataset,
 				PlotOrientation.VERTICAL, legend, tooltips, urls);
 		/*
 		 * Initialize a frame for visualizing the chart and attach the

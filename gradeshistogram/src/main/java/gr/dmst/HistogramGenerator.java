@@ -1,5 +1,6 @@
 package gr.dmst;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -64,26 +65,29 @@ public class HistogramGenerator {
 	    // main method
 	public static void main(String[] args) throws IOException {
         // TODO code application logic here
-        Scanner sc = new Scanner(System.in);
-        // // Requesting user for input file
-        System.out.println("Please enter full name of .txt file  \n\n(note that the .txt file "
-        		+ "should be in the same directory as this .jar)");
+       
         // Getting filename from user
-        String filename = sc.nextLine();
+        String path = args[0];
         // create token1
-        String token1 = "";    
-        // create Scanner inFile1
-        Scanner inFile1 = new Scanner(new File(filename)).useDelimiter(",\\s*");
+        String token1 = "";
+      
         // List<String> temps = new LinkedList<String>();
         List<String> temps = new ArrayList<String>();
+        try {
+        File file1 = new File(path);
+        // create Scanner inFile1
+		Scanner inFile1 = new Scanner(file1);
+       
         // while loop to read file
         while (inFile1.hasNext()) {
           // find next line
           token1 = inFile1.nextLine();
           // adding file to list
           temps.add(token1);
+          
+        } } catch (FileNotFoundException e) {
+        	e.printStackTrace();
         }
-        inFile1.close();
         // list to array
         String[] tempsArray = temps.toArray(new String[0]);
         int size = tempsArray.length;

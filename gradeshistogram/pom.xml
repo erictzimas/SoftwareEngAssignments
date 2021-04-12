@@ -11,7 +11,7 @@
 	
 	<name>Histogram Generator</name>
 	<description>
-		This modules creates a histogram from a given file of grades.
+		This module creates a histogram from a given file of grades using the JFreeChart library.
 		The generated jar is a "fat-jar" that includes the dependency 
 		in the main executable jar.  
 	</description>

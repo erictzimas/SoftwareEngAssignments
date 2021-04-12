@@ -7,8 +7,9 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
-	<name>Parent</name>
-	<description>Parent module for histogram</description>
+	<name>SEIPassignments</name>
+	<description>This maven project contains the modules for the Software Engineering In Practice 
+	course assignments.</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

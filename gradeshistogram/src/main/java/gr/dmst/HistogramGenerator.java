@@ -1,8 +1,19 @@
 package gr.dmst;
+import java.text.DecimalFormat;
+
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.axis.NumberAxis;
+import org.jfree.chart.axis.ValueAxis;
+import org.jfree.chart.labels.ItemLabelAnchor;
+import org.jfree.chart.labels.ItemLabelPosition;
+import org.jfree.chart.labels.StandardCategoryItemLabelGenerator;
+import org.jfree.chart.plot.CategoryPlot;
 import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.chart.plot.XYPlot;
+import org.jfree.chart.renderer.category.CategoryItemRenderer;
+import org.jfree.chart.ui.TextAnchor;
 import org.jfree.data.statistics.HistogramDataset;
 /***
  * 
@@ -24,7 +35,7 @@ public class HistogramGenerator {
 		//Create new HistogramDataset object to store the array of grades
 		HistogramDataset dataset = new HistogramDataset();
 		// Initialize array
-		double [] grades = new double[dataValues.length];
+		double[] grades = new double[dataValues.length];
 		/*
 		 * Populating the grades array from the input Integer array
 		 * values.
@@ -32,14 +43,15 @@ public class HistogramGenerator {
 		for (int i = 0; i < grades.length; i++) {
 			grades[i] = dataValues[i];
 		}
+		
 		// add the series to the dataset
-		dataset.addSeries("Grades", grades, 10);
+		dataset.addSeries("Grades", grades, 11, -0.5, 10.5);
 		boolean legend = false; // do not visualize a legend
 		boolean tooltips = false; // do not visualize tooltips
 		boolean urls = false; // do not visualize urls
 		// Declare and initialize a Histogram JFreeChart
 		JFreeChart chart = ChartFactory.createHistogram("Students grades Histogram", "Grade Score", "Number of Students", dataset,
-				PlotOrientation.VERTICAL, legend, tooltips, urls);
+				PlotOrientation.VERTICAL, legend, tooltips, urls);	
 		/*
 		 * Initialize a frame for visualizing the chart and attach the
 		 * previously created chart.

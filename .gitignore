@@ -1,5 +1,20 @@
+# IDE-specific files and directories
+.project
+.settings/
+.classpath
+
+# Maven output files and directories
+target/
+
+# Gradle output files and directories
+.gradle/
+build/
+
 # Compiled class file
 *.class
+
+# vim files
+*.swp
 
 # Log file
 *.log

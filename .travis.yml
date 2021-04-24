@@ -8,12 +8,3 @@ branches:
   - master
   - development
 
-
-
-script: 
-  - mvn clean package coveralls:report 
-    # the coveralls:report is required only for the coveralls coverage service
-    # the cobertura:cobertura is optional only for advanced coverage reporting and, if exists, is used by CodeCov 
-
-after_success:
-- bash <(curl -s https://codecov.io/bash) -t 223e1c7b-9d8f-4dba-96b4-43736abbdfe1 # replace the 1036eb64-2d96-44c6-b132-0dde4e7dfcca with your repository's token obtained by CodeCov

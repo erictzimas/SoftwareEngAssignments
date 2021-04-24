@@ -2,6 +2,13 @@
 
 [![Build Status](https://travis-ci.org/AntonisGkortzis/UnitTestingDemoProject.svg?branch=master)](https://travis-ci.com/github/erictzimas/SoftwareEngAssignments)
 
+[![codecov](https://codecov.io/gh/AntonisGkortzis/UnitTestingDemoProject/branch/master/graph/badge.svg)](https://codecov.io/gh/erictzimas/SoftwareEngAssignments)
+
+[![Coverage Status](https://coveralls.io/repos/github/AntonisGkortzis/UnitTestingDemoProject/badge.svg?branch=master&service=github)](https://coveralls.io/github/erictzimas/SoftwareEngAssignments)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 This repository serves as a basic demonstration of the build automation tools (i.e., Maven, Gradle) for the needs of the Software Eningineering in Practice (SEiP) course offered by the [Department of Management Science & Technology](https://www.dept.aueb.gr/en/dmst) of the Athens University of Economics and Business. 
 
 The goal of this repository is to:

@@ -7,11 +7,7 @@ branches:
   only:
   - master
   - development
-
-before_script: 
-  - cd project  # enter Maven root directory
-  - ls -la # this command just prints the contents of the current working directory.
-
+  
 script: 
   - mvn clean package jacoco:report coveralls:report cobertura:cobertura 
     # the coveralls:report is required only for the coveralls coverage service

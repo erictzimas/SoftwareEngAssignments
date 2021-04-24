@@ -1,6 +1,6 @@
 # Grades Histogram
 
-[![Build Status](https://travis-ci.org/erictzimas/SoftwareEngAssignments.svg?branch=development)](https://travis-ci.com/github/erictzimas/SoftwareEngAssignments)
+[![Build Status](https://travis-ci.org/erictzimas/SoftwareEngAssignments.svg?branch=master)](https://travis-ci.com/github/erictzimas/SoftwareEngAssignments)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache2.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Overview

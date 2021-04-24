@@ -1,5 +1,7 @@
 # Grades Histogram
+
 [![Build Status](https://travis-ci.org/AntonisGkortzis/UnitTestingDemoProject.svg?branch=master)](https://travis-ci.com/github/erictzimas/SoftwareEngAssignments)
+
 This repository serves as a basic demonstration of the build automation tools (i.e., Maven, Gradle) for the needs of the Software Eningineering in Practice (SEiP) course offered by the [Department of Management Science & Technology](https://www.dept.aueb.gr/en/dmst) of the Athens University of Economics and Business. 
 
 The goal of this repository is to:

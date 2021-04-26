@@ -36,4 +36,4 @@ You are more than welcome to contribute in this project. Just have in mind that 
 
 ## License
 
-[![License: Apache 2.0](https://opensource.org/licenses/Apache2.0)
+[License: Apache 2.0](https://opensource.org/licenses/Apache2.0)

@@ -8,3 +8,5 @@ branches:
   - master
   - development
 
+script: 
+  - mvn clean package jacoco:report coveralls:report

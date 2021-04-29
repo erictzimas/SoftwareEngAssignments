@@ -1,5 +1,6 @@
 package math;
 import org.junit.Assert;
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -32,6 +33,34 @@ public class MyMathTest {
 	@Test
 	public void testFactorialShouldReturnSix() {
 		Assert.assertEquals(6, mm.factorial(3));
+	}
+	/*
+	 * A test case that checks the functionality of isPrime() with 
+	 * input < 2
+	 */
+	@Rule
+	public ExpectedException thrown = ExpectedException.none(); //initialize it to .none()
+	@Test
+	public void testisPrimeShouldCauseException() {
+		thrown.expect(IllegalArgumentException.class);
+    	thrown.expectMessage("Input number must me >= 2");
+		mm.isPrime(1);
+	}
+	/*
+	 * A test case that checks the functionality of isPrime() with 
+	 * a valid prime number as input
+	 */
+	@Test
+	public void testisPrimeShouldReturnTrue() {
+		mm.isPrime(7);
+	}
+	/*
+	 * A test case that checks the functionality of isPrime() with
+	 * a valid non-prime input
+	 */
+	@Test 
+	public void testisPrimeShouldReturnFalse() {
+		mm.isPrime(2);
 	}
 
 

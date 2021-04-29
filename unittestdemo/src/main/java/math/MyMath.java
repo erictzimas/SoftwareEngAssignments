@@ -23,5 +23,20 @@ public class MyMath {
 		}
 		return fact;
 	}
+	/*
+	 * Method that returns true if value is prime or false if it is not
+	 */
+	public boolean isPrime(int n) {
+		boolean prime;
+		if(n<2) {
+			throw new IllegalArgumentException("Input number must me >= 2");
+		}
+		if(n%2 == 1) {
+			prime = true;
+		} else {
+			prime = false;
+		}
+		return prime;
+	}
 
 }

@@ -56,4 +56,11 @@ public class ArithmeticOperationsTest {
     	thrown2.expectMessage("The product does not fit in an Integer variable");
 		mm.multiply(2000000, 2000000);
 	}
+    /*
+	 * A unit test that checks the multipy() function with valid input
+	 */
+	@Test
+	public void testMultiplyNormalInput() {
+		Assert.assertEquals(6, mm.multiply(2, 3));
+	}
 }

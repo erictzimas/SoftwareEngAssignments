@@ -2,6 +2,7 @@ package math;
 import org.junit.Assert;
 
 
+
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -16,11 +17,18 @@ import static org.mockito.Mockito.*;
 public class ArithmeticOperationsTest {
 	ArithmeticOperations mm = new ArithmeticOperations();
 	/*
+	 * A unit test that checks the case of division with valid input
+	 */
+	@Test
+	public void testDivideNormalInput() {
+		Assert.assertEquals(2.0, mm.divide(4.0, 2.0), 0.0);
+	}
+	/*
 	 * A unit test that checks the case of division with 0
 	 */
 	@Test (expected = ArithmeticException.class)
 	public void testZeroInputShouldCauseException() {
-		mm.divide(2,0);
+		mm.divide(2.0,0.0);
 	}
 	/*
 	 * A unit test that checks a non-valid negative input in x axis

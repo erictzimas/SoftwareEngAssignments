@@ -23,15 +23,26 @@ public class ArithmeticOperationsTest {
 		mm.divide(2,0);
 	}
 	/*
-	 * A unit test that checks a non-valid negative input
+	 * A unit test that checks a non-valid negative input in x axis
 	 */
 	@Rule
 	public ExpectedException thrown = ExpectedException.none(); //initialize it to .none()
     @Test
-	public void testMultiplyNegative_exception() {
+	public void testMultiplyXNegative_exception() {
     	thrown.expect(IllegalArgumentException.class);
     	thrown.expectMessage("x & y should be >= 0");
 		mm.multiply(-2, 2);
+	}
+    /*
+	 * A unit test that checks a non-valid negative input in y axis
+	 */
+    @Rule
+	public ExpectedException thrown3 = ExpectedException.none(); //initialize it to .none()
+    @Test
+	public void testMultiplyYNegative_exception() {
+    	thrown3.expect(IllegalArgumentException.class);
+    	thrown3.expectMessage("x & y should be >= 0");
+		mm.multiply(2, -2);
 	}
 	/*
 	 * A test case that checks an invalid input size

@@ -52,7 +52,7 @@ public class MyMathTest {
 	 */
 	@Test
 	public void testisPrimeShouldReturnTrue() {
-		mm.isPrime(7);
+		Assert.assertEquals(true, mm.isPrime(7));
 	}
 	/*
 	 * A test case that checks the functionality of isPrime() with
@@ -60,7 +60,15 @@ public class MyMathTest {
 	 */
 	@Test 
 	public void testisPrimeShouldReturnFalse() {
-		mm.isPrime(2);
+		Assert.assertEquals(false, mm.isPrime(6));
+	}
+	/*
+	 * A test case that checks the functionality of isPrime() with
+	 * a valid input of 2
+	 */
+	@Test 
+	public void testisPrimeShouldReturnTrueforTwo() {
+		Assert.assertEquals(true, mm.isPrime(2));
 	}
 
 

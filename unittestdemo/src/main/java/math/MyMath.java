@@ -30,8 +30,9 @@ public class MyMath {
 		boolean prime;
 		if(n<2) {
 			throw new IllegalArgumentException("Input number must me >= 2");
-		}
-		if(n%2 == 1) {
+		} else if (n == 2) {
+			prime = true;
+		} else if(n%2 == 1) {
 			prime = true;
 		} else {
 			prime = false;

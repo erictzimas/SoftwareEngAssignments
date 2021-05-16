@@ -20,7 +20,6 @@ public class ArrayOperations {
 	 * Method that returns array of only primes
 	 */
 	public int[] findPrimesIntFile(FileIO fileIo, String filepath, MyMath myMath) {
-		MyMath mathi = new MyMath();
 		File file = new File(filepath);
 		if (!file.exists()) 
 			throw new IllegalArgumentException("Input file does not exist");
@@ -33,7 +32,7 @@ public class ArrayOperations {
 			while ((line = reader.readLine()) != null) {
 				try {
 				   int number = Integer.parseInt(line);
-				   if(mathi.isPrime(number)) {
+				   if(number%2 == 1) {
 				   numbersList.add(number);
 				   }
 				

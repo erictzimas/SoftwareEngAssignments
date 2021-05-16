@@ -29,7 +29,7 @@ public class ArrayOperationsTest {
 		when(fileio.readFile(path)).thenReturn(new int[] {2,3,4,5,6,7});
 		
 		ArrayOperations ao = new ArrayOperations();
-		int[] expected = {3,5,7};
+		int[] expected = {2,3,5,7};
 		int[] actual = ao.findPrimesIntFile(fileio, path, myMath);
 		
 		assertArrayEquals(expected, actual);	

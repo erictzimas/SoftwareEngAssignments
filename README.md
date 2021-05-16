@@ -1,4 +1,4 @@
-# Grades Histogram
+ # Grades Histogram
 
 [![Build Status](https://travis-ci.com/erictzimas/SoftwareEngAssignments.svg?token=9zS1UtSASxqusLq7W2mM&branch=development)](https://travis-ci.com/erictzimas/SoftwareEngAssignments)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache2.0-yellow.svg)](https://opensource.org/licenses/Apache-2.0)

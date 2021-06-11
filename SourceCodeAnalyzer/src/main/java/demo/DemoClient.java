@@ -15,7 +15,6 @@ public class DemoClient {
 		String outputFilePath = "output_metrics";
 		String outputFileType = "csv";
 
-		
 		if(args.length == 5) {
 			filepath = args[0];
 			sourceCodeAnalyzerType = args[1];
@@ -27,24 +26,10 @@ public class DemoClient {
 			System.exit(1);
 		}
 
-		// SourceCodeAnalyzer analyzer = new SourceCodeAnalyzer(sourceFileLocation);
-		// int loc = analyzer.calculateLOC(filepath, sourceCodeAnalyzerType);
-		// int nom = analyzer.calculateNOM(filepath, sourceCodeAnalyzerType);
-		// int noc = analyzer.calculateNOC(filepath, sourceCodeAnalyzerType);
-		
-		AnalyzerFactory analyzerfactory = new AnalyzerFactory();
-		Analyzer analyzer = analyzerfactory.createAnalyzer(sourceCodeAnalyzerType, sourceFileLocation);
-		int loc = analyzer.calculateLOC(filepath);
-		int nom = analyzer.calculateNOM(filepath);
-		int noc = analyzer.calculateNOC(filepath);
-		
+		TableCreation table = new TableCreation();
 		Map<String, Integer> metrics = new HashMap<>();
-		metrics.put("loc",loc);
-		metrics.put("nom",nom);
-		metrics.put("noc",noc);
+		metrics = table.createTable(sourceCodeAnalyzerType, sourceFileLocation, filepath);
 				
-		// MetricsExporter exporter = new MetricsExporter();
-		// exporter.writeFile(outputFileType, metrics, outputFilePath);
 		ExporterFactory factory = new ExporterFactory();
 		Exporter exporter = factory.createFileExporter(outputFileType);
 		exporter.writeFile(outputFileType, metrics, outputFilePath);

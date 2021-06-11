@@ -14,6 +14,8 @@ public class DemoClient {
 		String sourceFileLocation = "local";
 		String outputFilePath = "output_metrics";
 		String outputFileType = "csv";
+	    Exporter expo;
+
 		
 		if(args.length == 5) {
 			filepath = args[0];
@@ -36,8 +38,18 @@ public class DemoClient {
 		metrics.put("nom",nom);
 		metrics.put("noc",noc);
 				
-		MetricsExporter exporter = new MetricsExporter();
-		exporter.writeFile(outputFileType, metrics, outputFilePath);
+		// MetricsExporter exporter = new MetricsExporter();
+		// exporter.writeFile(outputFileType, metrics, outputFilePath);
+		
+		if (outputFileType.equals("csv")) {
+			expo = new CsvExporter();
+			
+		} else if (outputFileType.equals("json")) {
+			expo = new JsonExporter();
+		} else {
+			expo = null;
+		}
+		expo.writeFile(outputFileType, metrics, outputFilePath);
 	}
 
 }

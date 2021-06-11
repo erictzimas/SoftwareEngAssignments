@@ -14,7 +14,6 @@ public class DemoClient {
 		String sourceFileLocation = "local";
 		String outputFilePath = "output_metrics";
 		String outputFileType = "csv";
-	    Exporter expo;
 
 		
 		if(args.length == 5) {
@@ -28,10 +27,16 @@ public class DemoClient {
 			System.exit(1);
 		}
 
-		SourceCodeAnalyzer analyzer = new SourceCodeAnalyzer(sourceFileLocation);
-		int loc = analyzer.calculateLOC(filepath, sourceCodeAnalyzerType);
-		int nom = analyzer.calculateNOM(filepath, sourceCodeAnalyzerType);
-		int noc = analyzer.calculateNOC(filepath, sourceCodeAnalyzerType);
+		// SourceCodeAnalyzer analyzer = new SourceCodeAnalyzer(sourceFileLocation);
+		// int loc = analyzer.calculateLOC(filepath, sourceCodeAnalyzerType);
+		// int nom = analyzer.calculateNOM(filepath, sourceCodeAnalyzerType);
+		// int noc = analyzer.calculateNOC(filepath, sourceCodeAnalyzerType);
+		
+		AnalyzerFactory analyzerfactory = new AnalyzerFactory();
+		Analyzer analyzer = analyzerfactory.createAnalyzer(sourceCodeAnalyzerType, sourceFileLocation);
+		int loc = analyzer.calculateLOC(filepath);
+		int nom = analyzer.calculateNOM(filepath);
+		int noc = analyzer.calculateNOC(filepath);
 		
 		Map<String, Integer> metrics = new HashMap<>();
 		metrics.put("loc",loc);
@@ -40,16 +45,10 @@ public class DemoClient {
 				
 		// MetricsExporter exporter = new MetricsExporter();
 		// exporter.writeFile(outputFileType, metrics, outputFilePath);
+		ExporterFactory factory = new ExporterFactory();
+		Exporter exporter = factory.createFileExporter(outputFileType);
+		exporter.writeFile(outputFileType, metrics, outputFilePath);
 		
-		if (outputFileType.equals("csv")) {
-			expo = new CsvExporter();
-			
-		} else if (outputFileType.equals("json")) {
-			expo = new JsonExporter();
-		} else {
-			expo = null;
-		}
-		expo.writeFile(outputFileType, metrics, outputFilePath);
 	}
 
 }

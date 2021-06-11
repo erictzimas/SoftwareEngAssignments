@@ -3,6 +3,7 @@ package codeanalyzer;
 import java.util.Map;
 
 public class JsonExporter implements Exporter {
+	@Override
 	public void writeFile(String outputType, Map<String, Integer> metrics, String filepath) {
 			writeJson(metrics, filepath);
 	}

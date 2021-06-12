@@ -1,11 +1,11 @@
 # Design Patterns Assignment
 Starting class diagram
 
-<img src="/resources/Starting_class_diagram.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+<img src="/SourceCodeAnalyzer/resources/Starting_class_diagram.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
 
 Result class diagram
 
-<img src="/resources/Result_class_diagram.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+<img src="/SourceCodeAnalyzer/resources/Result_class_diagram.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
 
 1. To refactor this code base , the factory design pattern and the facade pattern were used.
 2. Benefits.

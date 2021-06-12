@@ -1,10 +1,11 @@
-package demo;
+package src.main.java.demo;
 
 import java.io.IOException;
+
 import java.util.HashMap;
 import java.util.Map;
 
-import codeanalyzer.*;
+import src.main.java.codeanalyzer.*;
 
 public class DemoClient {
 

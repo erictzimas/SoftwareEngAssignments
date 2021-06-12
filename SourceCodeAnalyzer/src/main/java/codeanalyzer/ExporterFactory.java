@@ -1,4 +1,4 @@
-package codeanalyzer;
+package src.main.java.codeanalyzer;
 
 public class ExporterFactory {
      public Exporter createFileExporter(String outputFileType) {

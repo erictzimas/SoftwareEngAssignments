@@ -1,4 +1,4 @@
-package codeanalyzer;
+package src.main.java.codeanalyzer;
 
 import java.io.File;
 import java.io.FileWriter;

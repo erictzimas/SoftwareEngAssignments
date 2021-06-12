@@ -1,4 +1,4 @@
-package codeanalyzer;
+package src.main.java.codeanalyzer;
 
 public class FileReaderFactory {
 	public FileReaderInterface createFileReader(String fileReaderType) {

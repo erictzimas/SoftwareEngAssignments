@@ -21,6 +21,7 @@
 		<module>gradeshistogram</module>
 		<module>unittestdemo</module>
 		<module>sourcecodeanalyzer</module>
+
 	</modules>
 	<dependencies>
 		<dependency>

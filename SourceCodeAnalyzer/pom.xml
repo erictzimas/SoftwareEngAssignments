@@ -7,7 +7,11 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Design Patterns assignment's code base</name>
 	<description>This module contains the code base that will serve as the starting point for the design pattern assignment</description>
-
+    <parent>
+    <groupId>gr.aueb.dmst.erictzimas</groupId>
+    <artifactId>ase2021_practical_assignments</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.8</maven.compiler.source>

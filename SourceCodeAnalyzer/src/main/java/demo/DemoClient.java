@@ -1,4 +1,4 @@
-package src.main.java.demo;
+package demo;
 
 import java.io.IOException;
 

@@ -20,7 +20,7 @@
 	<modules>
 		<module>gradeshistogram</module>
 		<module>unittestdemo</module>
-		<module>SourceCodeAnalyzer</module>
+		<module>sourcecodeanalyzer</module>
 	</modules>
 	<dependencies>
 		<dependency>

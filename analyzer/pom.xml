@@ -5,7 +5,7 @@
     <artifactId>ase2021_practical_assignments</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>SourceCodeAnalyzer</artifactId>
+  <artifactId>analyzer</artifactId>
   <name>analyzer</name>
   <description>This module is used for the unit test demo</description>
  

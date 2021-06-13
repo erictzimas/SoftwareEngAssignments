@@ -11,15 +11,16 @@ Result class diagram
 2. Benefits.
 * Separation of concerns: The logic to instantiate classes is
 separated.
-* Flexibility: We can extend lowerclass hierarchy without affecting
+* Flexibility: We can extend lower class hierarchy without affecting
 higher classes.
 * Provides a simple interface to a complex system
 * De-couples the subsystem for clients and other
 subsystems, thereby promoting subsystem
 independence and portability
 * Layers the subsystem
+* Hides implementation details from Client
 3. Classes Participating
-* 3 factory design patterns implemented in SourceFileReader, SourceCodeAnalyzer and MetricsExporter, 1 facade pattern implemented in DemoClient to hide the implementetion of the Analyzer functions.
+* 3 factory design patterns implemented in SourceFileReader, SourceCodeAnalyzer and MetricsExporter, 1 facade pattern implemented in DemoClient (TableCreation.java) to hide the implementation of the Analyzer functions.
 * 3 factories
   1. AnalyzerFactory.java
   2. ExporterFactory.java

@@ -1,5 +1,9 @@
 package src.main.java.codeanalyzer;
-
+/**
+ * This factory creates FileReader objects based on
+ * the fileReaderType
+ * @author erictzimas
+ */
 public class FileReaderFactory {
 	public FileReaderInterface createFileReader(String fileReaderType) {
 		FileReaderInterface fileReader;

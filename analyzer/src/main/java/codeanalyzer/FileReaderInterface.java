@@ -1,5 +1,9 @@
 package src.main.java.codeanalyzer;
-
+/**
+ * This interface is implemented by
+ * WebFileReader and LocalFileReader classes
+ * @author erictzimas
+ */
 import java.io.IOException;
 import java.util.List;
 

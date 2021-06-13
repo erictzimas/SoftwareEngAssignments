@@ -8,7 +8,11 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-
+/**
+ * This class reads a java file from
+ * a local directory
+ * @author erictzimas
+ */
 
 public class LocalFileReader implements FileReaderInterface {
     
@@ -26,11 +30,7 @@ public class LocalFileReader implements FileReaderInterface {
 			return lines;
 		// read a file stored in the web
 		}
-	/**
-	 * Reads a file and returns its content in a single String
-	 * @param fileReaderType the location of a file 
-	 * (<b>local</b> for locally stored files, 
-	 * <b>web</b> for files stored on the web). 
+	/** 
 	 * @param filepath the url of the file
 	 * @return a String that contains the contents of the file
 	 * or null if the type is neither <b>local</b> nor <b>web</b>

@@ -1,5 +1,9 @@
 package src.main.java.codeanalyzer;
-
+/**
+ * This factory class creates RegexAnalyzers and 
+ * StrCompAnalyzers based on the sourceCodeAnalyzerType
+ * @author erictzimas
+ */
 public class AnalyzerFactory {
    public Analyzer createAnalyzer(String sourceCodeAnalyzerType, String sourceFileLocation) {
 	   Analyzer analyzer;

@@ -4,7 +4,12 @@ import java.io.IOException;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
+/**
+ * This class finds the LOC, NOM and NOC of
+ * the given java file using the following methods using
+ * string comparison
+ * @author erictzimas
+ */
 public class StrCompAnalyzer implements Analyzer {
     FileReaderInterface fileReader;
 	

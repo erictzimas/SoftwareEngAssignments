@@ -50,4 +50,4 @@ Where args translate to:
 	* arg4 = “OutputFileType” [csv|json]
 example : 
 
-	* java -jar './target/analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar'  ./src/test/resources/TestClass.java regex local metrics_results csv
+	 java -jar './target/analyzer-0.0.1-SNAPSHOT-jar-with-dependencies.jar'  ./src/test/resources/TestClass.java regex local metrics_results csv

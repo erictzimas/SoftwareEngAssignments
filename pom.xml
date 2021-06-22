@@ -20,6 +20,8 @@
 	<modules>
 		<module>gradeshistogram</module>
 		<module>unittestdemo</module>
+		<module>analyzer</module>
+
 	</modules>
 	<dependencies>
 		<dependency>
